@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-myafos"
+    }
+  },
+  "defaultProject": "angular-myafos",
+  "cli": {
+    "analytics": false
+  }
 }
