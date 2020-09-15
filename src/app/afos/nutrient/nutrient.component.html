@@ -1,5 +1,52 @@
 <h2>Nutrients</h2>
 
-<div *ngFor="let nutrient of nutrients">
-  <p>{{nutrient.id}}, {{nutrient.code}}, {{nutrient.name}}</p>
+<div class="row">
+  <div class="col">
+      <div class="card border-light shadow mb-3 bg-white rounded" style="max-width: 100%;">
+        <div class="card-header text-primary">
+          <h5><b>Table of nutrients</b></h5>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-outline-secondary my-2 my-sm-0" [routerLink]="">
+                <i class="material-icons">add</i>
+              </button>
+              <button type="button" class="btn btn-outline-secondary">
+                <i class="material-icons">delete_forever</i>
+              </button>
+            </div>
+            <div class="col">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <table class="table table-hover">
+                <thead>
+                <tr> <!--class="table-secondary"-->
+                  <th scope="col">Id</th>
+                  <th scope="col">Code</th>
+                  <th scope="col">Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr  *ngFor="let nutrient of nutrients | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize" >
+                  <td>{{nutrient.id | number}}</td>
+                  <td>{{nutrient.code}}</td>
+                  <td>{{nutrient.name}}</td>
+                </tr>
+                </tbody>
+              </table>
+              <app-pagination
+                [pageSize]="pageSize"
+                [collectionSize]="nutrients.length"
+                (pageEvent)="updatePage($event)">
+              </app-pagination>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+

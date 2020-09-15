@@ -9,8 +9,14 @@ import {NutrientService} from './nutrient.service';
 })
 export class NutrientComponent implements OnInit {
   nutrients: Nutrient[] = [];
+  page: number = 1;
+  readonly pageSize:number=5;
 
   constructor(private nutrientService:NutrientService) { }
+
+  updatePage(value:number){
+    this.page = value;
+  }
 
   ngOnInit(): void {
     this.getNutrients();

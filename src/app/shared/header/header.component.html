@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <h2><span class="badge badge-light">My AFOS</span></h2>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div  class="collapse navbar-collapse"  id="navbarColor02">
+    <ul id="tabs" class="navbar-nav mr-auto" >
+      <li class="nav-item" *ngFor="let tab of tabs">
+        <a class="nav-link" [routerLink]="tab.path" (click)="tabNameEvent.emit(tab.name)">{{tab.name}}</a>
+      </li>
+    </ul>
+  </div>
+
+  <form class="form-inline my-2 my-lg-0">
+    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Logout</button>
+  </form>
+
+</nav>

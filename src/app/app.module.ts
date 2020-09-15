@@ -5,18 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NutrientComponent } from './afos/nutrient/nutrient.component';
 import { HomeComponent } from './afos/home/home.component';
-import {CommonModule} from '@angular/common';
+import { HeaderComponent } from './shared/header/header.component';
+import { ContentComponent } from './shared/content/content.component';
+import { PaginationComponent } from './shared/pagination/pagination.component';
+import { AddNutrientComponent } from './afos/nutrient/add-nutrient/add-nutrient.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NutrientComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    ContentComponent,
+    PaginationComponent,
+    AddNutrientComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CommonModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

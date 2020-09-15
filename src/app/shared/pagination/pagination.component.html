@@ -1,0 +1,13 @@
+<div *ngIf="collectionSize > pageSize">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link text-secondary" (click)="pageEvent.emit(1)">&laquo;</a>
+    </li>
+    <li class="page-item" *ngFor="let paginationPage of paginationPages">
+      <a class="page-link text-secondary" (click)="pageEvent.emit(paginationPage)">{{paginationPage}}</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link text-secondary" (click)="pageEvent.emit(paginationPages.length)">&raquo;</a>
+    </li>
+  </ul>
+</div>
