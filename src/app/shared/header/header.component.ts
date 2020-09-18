@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
     {name:'Dashboard', path:'home'},
     {name:'Nutrients', path:'nutrient'},
     {name:'Ingredients', path:'home'},
-    {name:'About', path:'home'},
+    {name:'Units', path:'home'},
   ];
 
   @Output() tabNameEvent = new EventEmitter<string>();
