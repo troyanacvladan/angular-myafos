@@ -18,13 +18,13 @@
           </div>
           <div class="row">
             <div class="col">
-              <table datatable class="table table-hover">
+              <table class="table table-hover">
                 <thead>
                 <tr> <!--class="table-secondary"-->
                   <th scope="col">Id</th>
-                  <th scope="col">Code</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Nutrient Group</th>
+                  <th scope="col" sortable="code" (sort)="onSort($event)">Code</th>
+                  <th scope="col" sortable="name" (sort)="onSort($event)">Name</th>
+                  <th scope="col" sortable="nutrinentGroup" (sort)="onSort($event)">Nutrient Group</th>
                   <th scope="col">Actions</th>
                 </tr>
                 </thead>
@@ -34,11 +34,11 @@
                   <td>{{nutrient.code}}</td>
                   <td>{{nutrient.name}}</td>
                   <td>{{nutrient.nutrinentGroup}}</td>
-                  <td id="table-action">
-                    <button class="btn btn-outline-secondary btn-sm">
+                  <td class="table-action">
+                    <button type="button" class="btn btn-outline-secondary btn-sm">
                       <i class="material-icons">edit</i>
                     </button>
-                    <button class="btn btn-outline-secondary btn-sm">
+                    <button type="button" class="btn btn-outline-secondary btn-sm">
                       <i class="material-icons">delete</i>
                     </button>
                   </td>
@@ -56,5 +56,3 @@
     </div>
   </div>
 </div>
-
-

@@ -9,6 +9,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { ContentComponent } from './shared/content/content.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
 import { AddNutrientComponent } from './afos/nutrient/add-nutrient/add-nutrient.component';
+import { SortableHeaderDirective } from './shared/sortable-header.directive';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AddNutrientComponent } from './afos/nutrient/add-nutrient/add-nutrient.
     HeaderComponent,
     ContentComponent,
     PaginationComponent,
-    AddNutrientComponent
+    AddNutrientComponent,
+    SortableHeaderDirective
   ],
   imports: [
     BrowserModule,
